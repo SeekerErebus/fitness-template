@@ -1,0 +1,91 @@
+---
+const navLinks = [
+  { label: "Classes", href: "#classes" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Trainers", href: "#trainers" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-iron-950/90 backdrop-blur-md border-b border-iron-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 bg-volt-500 rounded-lg flex items-center justify-center group-hover:bg-volt-400 transition-colors">
+          <svg class="w-5 h-5 text-iron-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11M12 6.5v11M3 9.5h3M18 9.5h3M3 14.5h3M18 14.5h3"/>
+          </svg>
+        </div>
+        <span class="text-lg font-bold tracking-tight">
+          <span class="text-iron-100">Iron</span>
+          <span class="text-iron-500">&</span>
+          <span class="text-flow-400">Flow</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-iron-400 hover:text-iron-100 transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a
+          href="#pricing"
+          class="hidden md:inline-flex items-center px-5 py-2.5 bg-volt-500 text-iron-950 text-sm font-bold rounded-lg hover:bg-volt-400 transition-colors"
+        >
+          Free Trial
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 text-iron-400 hover:text-iron-100 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-iron-900 border-b border-iron-700">
+    <div class="px-4 py-4 space-y-3">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="block text-sm font-medium text-iron-300 hover:text-volt-400 transition-colors py-2"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+  // Close menu when clicking a link
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,80 @@
+---
+import schedule from '../data/schedule.json';
+import classes from '../data/classes.json';
+
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+const classMap = new Map(classes.map(c => [c.id, c]));
+
+type ScheduleEntry = {
+  day: string;
+  time: string;
+  classId: string;
+};
+
+const scheduleByDay = days.map(day => ({
+  day,
+  shortDay: day.slice(0, 3),
+  slots: (schedule as ScheduleEntry[]).filter(s => s.day === day).map(s => ({
+    ...s,
+    class: classMap.get(s.classId),
+  })),
+}));
+---
+
+<section id="schedule" class="py-20 lg:py-28 bg-iron-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <span class="text-sm font-semibold text-flow-400 uppercase tracking-widest">Plan Your Week</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-iron-100 mt-3 mb-4">Class Schedule</h2>
+      <p class="max-w-2xl mx-auto text-iron-400 text-lg">
+        30+ classes every week. Find the time and training style that fits your life.
+      </p>
+    </div>
+
+    <!-- Schedule Grid -->
+    <div class="overflow-x-auto -mx-4 px-4">
+      <div class="min-w-[800px]">
+        <!-- Day Headers -->
+        <div class="grid grid-cols-7 gap-2 mb-3">
+          {scheduleByDay.map(({ day, shortDay }) => (
+            <div class="text-center">
+              <span class="hidden sm:inline text-sm font-semibold text-iron-200">{day}</span>
+              <span class="sm:hidden text-sm font-semibold text-iron-200">{shortDay}</span>
+            </div>
+          ))}
+        </div>
+
+        <!-- Time Slots -->
+        <div class="grid grid-cols-7 gap-2">
+          {scheduleByDay.map(({ slots }) => (
+            <div class="space-y-2">
+              {slots.map(({ time, class: cls }) => (
+                <div class={`p-3 rounded-xl border text-center transition-all hover:scale-[1.02] cursor-default ${
+                  cls?.color === 'volt'
+                    ? 'bg-iron-800 border-iron-700 hover:border-volt-500/40'
+                    : 'bg-iron-800 border-iron-700 hover:border-flow-500/40'
+                }`}>
+                  <div class="text-xs text-iron-500 mb-1">{time}</div>
+                  <div class={`text-sm font-semibold ${
+                    cls?.color === 'volt' ? 'text-volt-400' : 'text-flow-400'
+                  }`}>
+                    {cls?.name || 'TBD'}
+                  </div>
+                  <div class="text-xs text-iron-500 mt-0.5">{cls?.duration}min</div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <p class="text-sm text-iron-500">
+        Schedule subject to change. Book your spot in the app to guarantee your place.
+      </p>
+    </div>
+  </div>
+</section>

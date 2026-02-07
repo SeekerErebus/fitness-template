@@ -1,0 +1,74 @@
+---
+import trainers from '../data/trainers.json';
+---
+
+<section id="trainers" class="py-20 lg:py-28 bg-iron-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm font-semibold text-volt-400 uppercase tracking-widest">Meet the Team</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-iron-100 mt-3 mb-4">Our Trainers</h2>
+      <p class="max-w-2xl mx-auto text-iron-400 text-lg">
+        Certified, experienced, and genuinely invested in your progress. Our coaches show up with a plan and the energy to match.
+      </p>
+    </div>
+
+    <!-- Trainer Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {trainers.map((trainer, i) => (
+        <div class="group relative bg-iron-900 rounded-2xl border border-iron-800 overflow-hidden hover:border-iron-600 transition-all">
+          <!-- Image -->
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src={trainer.image}
+              alt={trainer.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Info Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-iron-950 via-iron-950/60 to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <!-- Name & Role -->
+            <h3 class="text-xl font-bold text-iron-100">{trainer.name}</h3>
+            <p class={`text-sm font-medium mt-0.5 ${i % 2 === 0 ? 'text-volt-400' : 'text-flow-400'}`}>
+              {trainer.role}
+            </p>
+
+            <!-- Bio -->
+            <p class="text-sm text-iron-400 mt-3 leading-relaxed line-clamp-3">
+              {trainer.bio}
+            </p>
+
+            <!-- Specialties -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              {trainer.specialties.map(specialty => (
+                <span class="text-xs px-2 py-1 rounded-full bg-iron-800/80 text-iron-300 border border-iron-700">
+                  {specialty}
+                </span>
+              ))}
+            </div>
+
+            <!-- Certifications -->
+            <div class="flex items-center gap-3 mt-3">
+              {trainer.certifications.map(cert => (
+                <span class="text-xs font-mono text-iron-500">{cert}</span>
+              ))}
+              <a
+                href={trainer.instagram}
+                class="ml-auto text-iron-500 hover:text-volt-400 transition-colors"
+                aria-label={`${trainer.name} Instagram`}
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

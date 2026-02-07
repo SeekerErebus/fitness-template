@@ -1,0 +1,71 @@
+---
+import classes from '../data/classes.json';
+
+const intensityColor = (intensity: string) => {
+  switch (intensity) {
+    case 'Low': return 'bg-flow-500/20 text-flow-400';
+    case 'Moderate': return 'bg-flow-500/20 text-flow-300';
+    case 'High': return 'bg-volt-500/20 text-volt-400';
+    case 'Very High': return 'bg-red-500/20 text-red-400';
+    default: return 'bg-iron-700 text-iron-300';
+  }
+};
+---
+
+<section id="classes" class="py-20 lg:py-28 bg-iron-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm font-semibold text-volt-400 uppercase tracking-widest">What We Offer</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-iron-100 mt-3 mb-4">Our Classes</h2>
+      <p class="max-w-2xl mx-auto text-iron-400 text-lg">
+        From heavy iron to flowing breath. Ten distinct class types designed to build every dimension of fitness.
+      </p>
+    </div>
+
+    <!-- Class Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      {classes.map((cls) => (
+        <div class={`group relative p-5 rounded-2xl border transition-all hover:-translate-y-1 hover:shadow-lg ${
+          cls.color === 'volt'
+            ? 'bg-iron-900 border-iron-800 hover:border-volt-500/50 hover:shadow-volt-500/10'
+            : 'bg-iron-900 border-iron-800 hover:border-flow-500/50 hover:shadow-flow-500/10'
+        }`}>
+          <!-- Category Badge -->
+          <div class="flex items-center justify-between mb-3">
+            <span class={`text-xs font-semibold uppercase tracking-wider ${
+              cls.color === 'volt' ? 'text-volt-400' : 'text-flow-400'
+            }`}>
+              {cls.category}
+            </span>
+            <span class={`text-xs font-medium px-2 py-0.5 rounded-full ${intensityColor(cls.intensity)}`}>
+              {cls.intensity}
+            </span>
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-lg font-bold text-iron-100 mb-2">{cls.name}</h3>
+
+          <!-- Description -->
+          <p class="text-sm text-iron-400 leading-relaxed mb-4">{cls.description}</p>
+
+          <!-- Meta -->
+          <div class="flex items-center gap-3 text-xs text-iron-500">
+            <span class="flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              {cls.duration} min
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+              {cls.trainer}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

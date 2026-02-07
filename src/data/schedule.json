@@ -1,0 +1,40 @@
+[
+  { "day": "Monday", "time": "6:00 AM", "classId": "power-hour" },
+  { "day": "Monday", "time": "7:30 AM", "classId": "vinyasa-flow" },
+  { "day": "Monday", "time": "12:00 PM", "classId": "burn-circuit" },
+  { "day": "Monday", "time": "5:30 PM", "classId": "metcon-mayhem" },
+  { "day": "Monday", "time": "7:00 PM", "classId": "yin-restore" },
+
+  { "day": "Tuesday", "time": "6:00 AM", "classId": "ride-or-die" },
+  { "day": "Tuesday", "time": "7:30 AM", "classId": "core-sculpt" },
+  { "day": "Tuesday", "time": "12:00 PM", "classId": "box-fit" },
+  { "day": "Tuesday", "time": "5:30 PM", "classId": "power-hour" },
+  { "day": "Tuesday", "time": "7:00 PM", "classId": "barre-burn" },
+
+  { "day": "Wednesday", "time": "6:00 AM", "classId": "burn-circuit" },
+  { "day": "Wednesday", "time": "7:30 AM", "classId": "vinyasa-flow" },
+  { "day": "Wednesday", "time": "12:00 PM", "classId": "olympic-lift" },
+  { "day": "Wednesday", "time": "5:30 PM", "classId": "ride-or-die" },
+  { "day": "Wednesday", "time": "7:00 PM", "classId": "yin-restore" },
+
+  { "day": "Thursday", "time": "6:00 AM", "classId": "metcon-mayhem" },
+  { "day": "Thursday", "time": "7:30 AM", "classId": "core-sculpt" },
+  { "day": "Thursday", "time": "12:00 PM", "classId": "burn-circuit" },
+  { "day": "Thursday", "time": "5:30 PM", "classId": "box-fit" },
+  { "day": "Thursday", "time": "7:00 PM", "classId": "barre-burn" },
+
+  { "day": "Friday", "time": "6:00 AM", "classId": "power-hour" },
+  { "day": "Friday", "time": "7:30 AM", "classId": "vinyasa-flow" },
+  { "day": "Friday", "time": "12:00 PM", "classId": "ride-or-die" },
+  { "day": "Friday", "time": "5:30 PM", "classId": "metcon-mayhem" },
+  { "day": "Friday", "time": "7:00 PM", "classId": "yin-restore" },
+
+  { "day": "Saturday", "time": "8:00 AM", "classId": "olympic-lift" },
+  { "day": "Saturday", "time": "9:30 AM", "classId": "burn-circuit" },
+  { "day": "Saturday", "time": "11:00 AM", "classId": "barre-burn" },
+  { "day": "Saturday", "time": "12:30 PM", "classId": "vinyasa-flow" },
+
+  { "day": "Sunday", "time": "9:00 AM", "classId": "yin-restore" },
+  { "day": "Sunday", "time": "10:30 AM", "classId": "core-sculpt" },
+  { "day": "Sunday", "time": "12:00 PM", "classId": "ride-or-die" }
+]

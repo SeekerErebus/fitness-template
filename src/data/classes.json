@@ -1,0 +1,102 @@
+[
+  {
+    "id": "power-hour",
+    "name": "Power Hour",
+    "category": "Strength",
+    "duration": 60,
+    "intensity": "High",
+    "trainer": "Marcus Cole",
+    "description": "Full-body barbell strength training. Progressive overload principles with compound lifts. All levels welcome — weights scale to your ability.",
+    "color": "volt"
+  },
+  {
+    "id": "vinyasa-flow",
+    "name": "Vinyasa Flow",
+    "category": "Yoga",
+    "duration": 75,
+    "intensity": "Moderate",
+    "trainer": "Aria Chen",
+    "description": "Dynamic flowing yoga connecting breath to movement. Build flexibility, balance, and mindfulness in a heated room.",
+    "color": "flow"
+  },
+  {
+    "id": "burn-circuit",
+    "name": "Burn Circuit",
+    "category": "HIIT",
+    "duration": 45,
+    "intensity": "Very High",
+    "trainer": "Dex Morales",
+    "description": "30-second all-out intervals with active recovery. Kettlebells, battle ropes, box jumps, and bodyweight movements. Bring a towel.",
+    "color": "volt"
+  },
+  {
+    "id": "core-sculpt",
+    "name": "Core Sculpt",
+    "category": "Pilates",
+    "duration": 50,
+    "intensity": "Moderate",
+    "trainer": "Suki Tanaka",
+    "description": "Mat-based Pilates focused on deep core activation, spinal mobility, and postural alignment. Low impact, high results.",
+    "color": "flow"
+  },
+  {
+    "id": "metcon-mayhem",
+    "name": "MetCon Mayhem",
+    "category": "CrossFit",
+    "duration": 60,
+    "intensity": "Very High",
+    "trainer": "Jamal Wright",
+    "description": "Metabolic conditioning WODs combining gymnastics, weightlifting, and cardio. Scaled options for every fitness level.",
+    "color": "volt"
+  },
+  {
+    "id": "ride-or-die",
+    "name": "Ride or Die",
+    "category": "Spin",
+    "duration": 45,
+    "intensity": "High",
+    "trainer": "Nina Volkov",
+    "description": "Interval-based indoor cycling with hill climbs, sprints, and endurance blocks. Curated playlists that match the energy.",
+    "color": "flow"
+  },
+  {
+    "id": "yin-restore",
+    "name": "Yin & Restore",
+    "category": "Yoga",
+    "duration": 60,
+    "intensity": "Low",
+    "trainer": "Aria Chen",
+    "description": "Slow, deep stretching with holds of 3-5 minutes. Targets connective tissue and nervous system recovery. Perfect for rest days.",
+    "color": "flow"
+  },
+  {
+    "id": "box-fit",
+    "name": "Box Fit",
+    "category": "Boxing",
+    "duration": 50,
+    "intensity": "High",
+    "trainer": "Dex Morales",
+    "description": "Non-contact boxing fitness combining heavy bag work, footwork drills, and conditioning circuits. Stress relief guaranteed.",
+    "color": "volt"
+  },
+  {
+    "id": "barre-burn",
+    "name": "Barre Burn",
+    "category": "Barre",
+    "duration": 55,
+    "intensity": "Moderate",
+    "trainer": "Suki Tanaka",
+    "description": "Ballet-inspired movements using the barre, light weights, and bodyweight to sculpt long, lean muscle. Expect to shake.",
+    "color": "flow"
+  },
+  {
+    "id": "olympic-lift",
+    "name": "Olympic Lift Lab",
+    "category": "Strength",
+    "duration": 75,
+    "intensity": "High",
+    "trainer": "Marcus Cole",
+    "description": "Technique-focused class for clean & jerk and snatch progressions. Small group format with individual coaching attention.",
+    "color": "volt"
+  }
+]

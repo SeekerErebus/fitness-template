@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Drop-In",
+    "price": 25,
+    "period": "per class",
+    "features": [
+      "Single class access",
+      "All class types",
+      "No commitment",
+      "Locker room access"
+    ],
+    "highlighted": false,
+    "cta": "Buy a Pass"
+  },
+  {
+    "name": "Essentials",
+    "price": 79,
+    "period": "per month",
+    "features": [
+      "8 classes per month",
+      "All class types",
+      "App booking",
+      "Locker room access",
+      "1 guest pass/month"
+    ],
+    "highlighted": false,
+    "cta": "Get Started"
+  },
+  {
+    "name": "Unlimited",
+    "price": 139,
+    "period": "per month",
+    "features": [
+      "Unlimited classes",
+      "Priority booking",
+      "Open gym access",
+      "Nutrition guide",
+      "2 guest passes/month",
+      "Free merch quarterly"
+    ],
+    "highlighted": true,
+    "cta": "Join Now"
+  },
+  {
+    "name": "Premium",
+    "price": 199,
+    "period": "per month",
+    "features": [
+      "Everything in Unlimited",
+      "1 PT session/month",
+      "InBody scan monthly",
+      "Recovery room access",
+      "4 guest passes/month",
+      "Priority waitlist"
+    ],
+    "highlighted": false,
+    "cta": "Go Premium"
+  }
+]

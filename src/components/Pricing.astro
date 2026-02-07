@@ -1,0 +1,79 @@
+---
+import pricing from '../data/pricing.json';
+---
+
+<section id="pricing" class="py-20 lg:py-28 bg-iron-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm font-semibold text-flow-400 uppercase tracking-widest">Membership</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-iron-100 mt-3 mb-4">Simple Pricing</h2>
+      <p class="max-w-2xl mx-auto text-iron-400 text-lg">
+        No contracts. No hidden fees. Cancel anytime. Start with a free 7-day trial on any plan.
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {pricing.map((plan) => (
+        <div class={`relative flex flex-col p-6 rounded-2xl border transition-all ${
+          plan.highlighted
+            ? 'bg-iron-800 border-volt-500 shadow-lg shadow-volt-500/10 scale-[1.02] lg:scale-105'
+            : 'bg-iron-800 border-iron-700 hover:border-iron-600'
+        }`}>
+          {/* Popular Badge */}
+          {plan.highlighted && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span class="px-4 py-1 bg-volt-500 text-iron-950 text-xs font-bold uppercase tracking-wider rounded-full">
+                Most Popular
+              </span>
+            </div>
+          )}
+
+          {/* Plan Name */}
+          <h3 class="text-lg font-bold text-iron-100 mb-1">{plan.name}</h3>
+
+          {/* Price */}
+          <div class="mb-6">
+            <span class="text-4xl font-black text-iron-100">${plan.price}</span>
+            <span class="text-sm text-iron-500 ml-1">/{plan.period}</span>
+          </div>
+
+          {/* Features */}
+          <ul class="space-y-3 mb-8 flex-1">
+            {plan.features.map(feature => (
+              <li class="flex items-start gap-2 text-sm text-iron-300">
+                <svg class={`w-4 h-4 mt-0.5 shrink-0 ${plan.highlighted ? 'text-volt-400' : 'text-flow-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          {/* CTA */}
+          <a
+            href="#contact"
+            class={`block text-center py-3 px-6 rounded-xl font-bold text-sm transition-all ${
+              plan.highlighted
+                ? 'bg-volt-500 text-iron-950 hover:bg-volt-400 hover:shadow-lg hover:shadow-volt-500/25'
+                : 'bg-iron-700 text-iron-200 hover:bg-iron-600'
+            }`}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    {/* Trial Banner */}
+    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-volt-500/10 to-flow-500/10 border border-iron-700 text-center">
+      <p class="text-iron-200 font-semibold text-lg">
+        Not sure yet? Try any class for free.
+      </p>
+      <p class="text-iron-400 text-sm mt-1">
+        Your first 7 days are on us. No credit card required. Just show up.
+      </p>
+    </div>
+  </div>
+</section>

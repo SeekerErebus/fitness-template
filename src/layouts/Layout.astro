@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Iron & Flow — Where strength meets serenity. Modern gym and yoga studio offering 10+ class types, expert trainers, and flexible memberships." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>{title} | Iron & Flow</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot />
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-iron-900/95 backdrop-blur-sm border-t border-iron-700 p-3">
+      <a
+        href="#pricing"
+        class="block w-full text-center bg-volt-500 text-iron-950 font-bold py-3 rounded-lg hover:bg-volt-400 transition-colors"
+      >
+        Start Your Free Trial
+      </a>
+    </div>
+  </body>
+</html>

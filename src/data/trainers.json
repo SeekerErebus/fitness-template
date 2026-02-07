@@ -1,0 +1,62 @@
+[
+  {
+    "id": "marcus-cole",
+    "name": "Marcus Cole",
+    "role": "Head Strength Coach",
+    "specialties": ["Powerlifting", "Olympic Lifting", "Sports Performance"],
+    "bio": "Former collegiate football player with 12 years of coaching experience. CSCS and USAW certified. Specializes in building raw strength and explosive power.",
+    "image": "https://placehold.co/400x500/1a1a24/a3e635?text=Marcus+C",
+    "certifications": ["CSCS", "USAW-L2"],
+    "instagram": "#"
+  },
+  {
+    "id": "aria-chen",
+    "name": "Aria Chen",
+    "role": "Yoga & Mobility Director",
+    "specialties": ["Vinyasa Flow", "Yin Yoga", "Mobility Training"],
+    "bio": "RYT-500 certified with 8 years of teaching experience. Blends traditional yoga philosophy with modern movement science to help clients move better and recover faster.",
+    "image": "https://placehold.co/400x500/1a1a24/06b6d4?text=Aria+C",
+    "certifications": ["RYT-500", "FRC"],
+    "instagram": "#"
+  },
+  {
+    "id": "dex-morales",
+    "name": "Dex Morales",
+    "role": "HIIT & Conditioning Specialist",
+    "specialties": ["HIIT", "Metabolic Conditioning", "Boxing Fitness"],
+    "bio": "Competitive amateur boxer turned fitness coach. Known for high-energy classes that push limits while keeping form locked in. 6 years coaching experience.",
+    "image": "https://placehold.co/400x500/1a1a24/a3e635?text=Dex+M",
+    "certifications": ["NASM-CPT", "Precision Nutrition L1"],
+    "instagram": "#"
+  },
+  {
+    "id": "suki-tanaka",
+    "name": "Suki Tanaka",
+    "role": "Pilates & Barre Instructor",
+    "specialties": ["Mat Pilates", "Reformer Pilates", "Barre"],
+    "bio": "Classically trained Pilates instructor with a background in professional dance. Focuses on core stability, posture correction, and graceful movement.",
+    "image": "https://placehold.co/400x500/1a1a24/06b6d4?text=Suki+T",
+    "certifications": ["PMA-CPT", "BASI Pilates"],
+    "instagram": "#"
+  },
+  {
+    "id": "jamal-wright",
+    "name": "Jamal Wright",
+    "role": "CrossFit & Functional Training",
+    "specialties": ["CrossFit", "Functional Fitness", "Kettlebells"],
+    "bio": "CrossFit Level 3 trainer and former regional competitor. Believes in building practical, real-world fitness that transfers to everyday life. 9 years in the game.",
+    "image": "https://placehold.co/400x500/1a1a24/a3e635?text=Jamal+W",
+    "certifications": ["CF-L3", "StrongFirst SFG"],
+    "instagram": "#"
+  },
+  {
+    "id": "nina-volkov",
+    "name": "Nina Volkov",
+    "role": "Spin & Endurance Coach",
+    "specialties": ["Indoor Cycling", "Endurance Training", "Triathlon Prep"],
+    "bio": "Completed 3 Ironman triathlons and coaches endurance athletes at every level. Her spin classes are legendary — equal parts playlist curation and suffering.",
+    "image": "https://placehold.co/400x500/1a1a24/06b6d4?text=Nina+V",
+    "certifications": ["NASM-CPT", "Schwinn Certified"],
+    "instagram": "#"
+  }
+]
